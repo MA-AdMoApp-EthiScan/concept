@@ -80,5 +80,28 @@ relations: chien de Alice et Bob
   - L'application affiche l'impact carbone des produits scannés.
 - **Histoire**: Alice et Bob veulent pouvoir consulter l'impact carbone des produits scannés. Par exemple, ils veulent savoir si le produit a un impact carbone élevé ou faible.
 
-###
-  
+### 8. En tant qu'utilisateur, j'aimerais pouvoir trouver des produits similaires à celui que j'ai scanné
+
+- **Priorité** : Nice to Have
+- **Difficulté** : Moyen
+- **Critères d'acceptation** :
+  - L'application affiche des produits similaires à celui scanné.
+- **Histoire**: Bob trouve une boîte de conserve de haricots verts à la coop, elle aimerait savoir si elle peut trouver un produit similaire moins cher ailleurs.
+
+### 8. En tant qu'utilisateur, j'aimerais pouvoir filtrer les produits similaire par importance en fonction de mes préférences (metadata)
+
+- **Priorité** : Nice to Have
+- **Difficulté** : Moyen
+- **Critères d'acceptation** :
+  - L'application affiche des produits similaires à celui scanné.
+  - L'utilisateur peut filtrer les produits similaires par importance en fonction de ses préférences.
+- **Histoire**: Bob trouve une boîte de conserve de haricots verts à la coop, elle aimerait savoir si elle peut trouver un produit similaire moins cher ailleurs.
+
+### 9. En tant qu'utilisateur, je veux pouvoir ajouter une importance sur les metadata que je suis abonné, pour que l'application préfère les produits qui respectent ces metadata au mieux
+
+- **Priorité** : Nice to Have
+- **Difficulté** : Moyen
+- **Critères d'acceptation** :
+  - L'utilisateur peut ajouter une importance sur les metadata qu'il suit.
+  - L'application préfère les produits qui respectent ces metadata au mieux.
+- **Histoire**: Alice réalise un gâteau d'aniversaire pour Bob, elle souhaiterait trouver une farine sans gluten pour que Bob puisse en manger. Alors elle souhaiterait similaire soient sans gluten avant d'être moins cher.
