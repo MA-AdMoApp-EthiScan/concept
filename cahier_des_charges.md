@@ -22,7 +22,7 @@ L'application a pour but de :
 
 - Possibilité d'ajouter des produits à une liste de favoris pour un accès rapide.
 
-### 3.3 Préférences d'Achat [MH]
+### 3.3 S'abonner aux Metadatas [MH]
 
 - Configuration de préférences d'achat personnalisées : Local, Bio, Qualité, Prix, Impact carbone, Durabilité de l'emballage, Livrable par la poste.
 
