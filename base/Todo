@@ -1,0 +1,81 @@
+# Liste des Tâches
+
+## WireFrame
+
+- Vue-Inscription
+- Vue-Connexion
+- Vue-Scan de Produit
+- Vue-Liste des Produits Favoris
+- Vue-Abonnement aux Metadatas
+- Vue-Produit
+
+## Vue - Inscription
+
+- Input : Nom
+- Input : Prénom
+- Input : Email
+- Input : Mot de Passe
+- Input : Confirmation du Mot de Passe
+- Button : Inscription
+
+## Vue - Connexion
+
+- Input : Email
+- Input : Mot de Passe
+- Button : Connexion
+
+## Vue - Scan de Produit
+
+- Input : Caméra
+- Button : Scanner
+- Widget : Produit Scanné
+- Liste : Historique des Produits Scannés
+
+## Vue - Liste des Produits Favoris
+
+- Liste : Produits Favoris
+- SearchBar : Recherche de Produits
+- Button : Editer la Liste
+- Button : Supprimer un Produit
+
+## Vue - Abonnement aux Metadatas
+
+- Liste : Abonnements
+- Button : Editer la Liste
+- Button : Ajouter un Abonnement
+- SearchBar : Recherche de Metadatas
+- widget : suggestion de Metadatas
+
+## Vue - Produit
+
+- Text : Nom du Produit
+- Text : Description du Produit
+- Liste Certifications : Labels des certifications
+- Liste Fournisseurs : Présence chez différents fournisseurs
+- Liste widget : vue des Metadatas suivie par l'utilisateur
+
+## Vue - Metadata Évolution du prix
+
+- Liste : Prix chez différents fournisseurs
+- Graphique : Évolution du prix
+
+## Vue - Metadata Impact Carbone
+
+- Text : Empreinte carbone du produit
+- Indicateur : Couleur de l'impact (vert foncé, vert clair, rouge, orange, jaune)
+
+## Logique - Inscription
+
+## Logique - Connexion
+
+## Logique - Scan de Produit
+
+## Logique - Liste des Produits Favoris
+
+## Logique - Abonnement aux Metadatas
+
+## Logique - Produit
+
+## Logique - Metadata Évolution du prix
+
+## Logique - Metadata Impact Carbone

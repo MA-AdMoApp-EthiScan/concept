@@ -31,9 +31,7 @@ L'application a pour but de :
 - **Labels** : Affichage des labels et certifications (éco-labels, bio, etc.).
 - **Évolution du Prix** : Visualisation de l'évolution du prix chez différents fournisseurs.
 - **Impact Carbone** : Information sur l'empreinte carbone du produit.
-- **Certifications** : Détail des certifications obtenues par le produit.
 - **Metadata** : Informations générales (nom du produit, lien vers plus d'infos).
-- **Score Nutritionnel** : Score basé sur des données fiables comme Yuca.
 
 ## 4. Stack Technologique
 
