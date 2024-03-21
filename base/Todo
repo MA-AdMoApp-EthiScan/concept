@@ -20,31 +20,34 @@
 
 ## Vue - Connexion
 
-- Input : Email
+- Input : Email / Username
 - Input : Mot de Passe
 - Button : Connexion
+- Button : Mot de passe oublié ?
 
-## Vue - Scan de Produit
+## Vue - Liste des Produits Favoris (Favoris)
+
+- SearchBar : Recherche de Produits
+- Liste : Produits Favoris
+- Button : Editer la Liste
+- Button : Supprimer un Produit
+- Tri : Possibilité de trier les produits par différent critères*
+- Catégorie : Possibilité de filtrer les produits par catégories*
+
+## Vue - Scan de Produit (Scan)
 
 - Input : Caméra
 - Button : Scanner
-- Widget : Produit Scanné
 - Liste : Historique des Produits Scannés
 
-## Vue - Liste des Produits Favoris
-
-- Liste : Produits Favoris
-- SearchBar : Recherche de Produits
-- Button : Editer la Liste
-- Button : Supprimer un Produit
-
-## Vue - Abonnement aux Metadatas
+## Vue - Abonnement aux Metadatas (Settings)
 
 - Liste : Abonnements
 - Button : Editer la Liste
 - Button : Ajouter un Abonnement
 - SearchBar : Recherche de Metadatas
-- widget : suggestion de Metadatas
+- widget : suggestion de Metadatas *
+- Réglages : D'autres réglages utilisateurs
 
 ## Vue - Produit
 
@@ -58,6 +61,7 @@
 
 - Liste : Prix chez différents fournisseurs
 - Graphique : Évolution du prix
+- Indicateurs: Comme sur toppreise (prix max, prix min)
 
 ## Vue - Metadata Impact Carbone
 
@@ -79,3 +83,5 @@
 ## Logique - Metadata Évolution du prix
 
 ## Logique - Metadata Impact Carbone
+
+`*` : NTH
