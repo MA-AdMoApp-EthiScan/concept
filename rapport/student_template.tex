@@ -1,0 +1,224 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cleese Assignment (For Students)
+% LaTeX Template
+% Version 2.0 (27/5/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+\renewcommand{\listalgorithmname}{Liste des algorithmes}
+\floatname{algorithm}{Algorithme}
+\renewcommand{\algorithmicreturn}{\textbf{retourne}}
+\renewcommand{\algorithmicprocedure}{\textbf{procédure}}
+\renewcommand{\And}{\textbf{et}\ }
+\renewcommand{\algorithmicrequire}{\textbf{Entrée:}}
+\renewcommand{\algorithmicensure}{\textbf{Sortie:}}
+\renewcommand{\algorithmicend}{\textbf{fin}}
+\renewcommand{\algorithmicif}{\textbf{si}}
+\renewcommand{\algorithmicthen}{\textbf{alors}}
+\renewcommand{\algorithmicelse}{\textbf{sinon}}
+\renewcommand{\algorithmicfor}{\textbf{pour}}
+\renewcommand{\algorithmicforall}{\textbf{pour tout}}
+\renewcommand{\algorithmicdo}{\textbf{faire}}
+\renewcommand{\algorithmicwhile}{\textbf{tant que}}
+\newcommand{\algorithmicelsif}{\algorithmicelse\ \algorithmicif}
+\newcommand{\algorithmicendif}{\algorithmicend\ \algorithmicif}
+\newcommand{\algorithmicendfor}{\algorithmicend\ \algorithmicfor}
+%\renewcommand{\Comment}[1]{\{#1\}}
+\renewcommand{\Comment}[1]{\raggedright\hfill\small//~#1}
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+% Required
+\newcommand{\assignmentQuestionName}{Question} % The word to be used as a prefix to question numbers; example alternatives: Problem, Exercise
+\newcommand{\assignmentClass}{IoT} % Course/class
+\newcommand{\assignmentTitle}{EthiScan - L'App pour les Consomm'acteurs} % Assignment title or name
+\newcommand{\assignmentAuthorName}{Olivier D'Ancona, Clarisse Fleurimont, Yannis Chamot} % Student name
+
+% Optional (comment lines to remove)
+\newcommand{\assignmentClassInstructor}{Professeur: Pascal Bruegger \& Aïcha Rizzotti} % Intructor name/time/description
+\newcommand{\assignmentDueDate}{Vendredi,\ 14\ Mai\, 2024} % Due date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+
+\clearpage\maketitle % Print the title page
+\setcounter{page}{0}
+\thispagestyle{empty} % Suppress headers and footers on the title page
+\newpage
+
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\section*{Abstract/Résumé}
+\addcontentsline{toc}{section}{Abstract/Résumé}
+
+EthiScan est une application mobile destinée à transformer l'expérience de consommation en permettant aux utilisateurs de scanner des produits pour obtenir des informations détaillées alignées avec leurs valeurs personnelles. Elle vise à promouvoir une consommation responsable en fournissant des données sur les labels environnementaux et nutritionnels, l'évolution des prix, l'impact carbone, et d'autres critères pertinents. En intégrant une technologie de pointe et une conception centrée sur l'utilisateur, EthiScan offre une plateforme fiable et intuitive pour faire des choix de consommation éclairés et responsables.
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+\subsection{Technologie Utilisée}
+
+EthiScan utilise une stack technologique moderne et efficace pour offrir une expérience utilisateur optimale. Le front-end de l'application est développé avec Flutter, permettant une interface utilisateur cohérente et réactive sur iOS, Android et le Web. Le back-end repose sur Firebase, qui fournit une solution robuste pour l'authentification, le stockage des données, et les fonctionnalités backend nécessaires.
+
+Flutter, avec sa capacité de compilation native, offre des performances élevées et une excellente réactivité, essentielles pour les fonctionnalités de scan en temps réel. L'utilisation de Firebase permet une gestion sécurisée des données utilisateurs et facilite l'intégration d'APIs externes pour la récupération des données produits.
+
+%----------------------------------------------------------------------------------------
+%	UX
+%----------------------------------------------------------------------------------------
+
+\section{UX}
+
+\subsection{Solutions Utilisées}
+
+En termes d'expérience utilisateur (UX), EthiScan met l'accent sur la simplicité et l'efficacité. L'interface utilisateur est conçue pour être intuitive, permettant aux utilisateurs de naviguer facilement entre les différentes fonctionnalités. Le processus de scan de produit est rapide et direct, offrant un retour immédiat et des informations détaillées sur le produit scanné.
+
+La personnalisation de l'application, via la configuration des préférences d'achat, permet aux utilisateurs de recevoir des informations spécifiquement alignées avec leurs valeurs et critères personnels. Cette approche centrée sur l'utilisateur renforce l'engagement et améliore l'expérience globale.
+
+%----------------------------------------------------------------------------------------
+%	EVALUATIONS
+%----------------------------------------------------------------------------------------
+
+\section{Évaluations}
+
+\subsection{Évaluations Implémentées}
+
+L'évaluation de l'application s'est concentrée sur la performance, l'exactitude des données, et la satisfaction utilisateur. Des tests de performance ont été réalisés pour s'assurer que l'application répond rapidement aux requêtes de scan. L'exactitude des informations fournies a été vérifiée contre des sources externes pour garantir la fiabilité des données. Enfin, des enquêtes de satisfaction utilisateur ont aidé à recueillir des retours sur l'expérience d'utilisation, permettant d'identifier les domaines d'amélioration.
+
+%----------------------------------------------------------------------------------------
+%	TECHNIQUES
+%----------------------------------------------------------------------------------------
+
+\section{Techniques}
+
+\subsection{Quoi et Comment}
+
+EthiScan implémente un système de scan de code-barres qui identifie les produits et récupère des informations à partir de bases de données externes via des API. L'application traite ces données pour afficher les informations pertinentes aux utilisateurs, telles que les labels, l'évolution des prix, et l'impact carbone.
+
+\subsection{Problèmes Rencontrés et Solutions}
+
+Un défi a été l'optimisation du temps de réponse pour le scan de produits. Cela a été résolu en optimisant les requêtes de base de données et en utilisant un cache pour stocker les données des produits fréquemment scannés.
+
+\subsection{Conclusion Technique}
+
+La combinaison de Flutter et Firebase a prouvé son efficacité pour développer une application mobile performante et réactive. L'architecture choisie a permis une mise en œuvre rapide des fonctionnalités tout en maintenant une haute qualité et fiabilité des données.
+
+\subsection{Auto-Critique du Code}
+
+\subsubsection{Points Positifs}
+\begin{itemize}
+    \item Code bien structuré et commenté, facilitant la maintenance et les mises à jour.
+    \item Utilisation efficace des patterns de conception pour une architecture solide.
+\end{itemize}
+
+\subsubsection{Points à Améliorer}
+\begin{itemize}
+    \item Couverture des tests unitaires à augmenter pour assurer une meilleure stabilité.
+    \item Optimisation possible de certaines requêtes de données pour accélérer les temps de réponse.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	ANNEXES
+%----------------------------------------------------------------------------------------
+
+\section{Annexes}
+
+\subsection{Cahier des Charges Original}
+
+\begin{itemize}
+    \item \textbf{Introduction}: EthiScan est une application mobile conçue pour permettre aux utilisateurs de scanner des produits et de recevoir des informations détaillées alignées avec leurs valeurs personnelles de consommation. Elle vise à promouvoir une consommation responsable en fournissant des données telles que l'évolution du prix, les labels environnementaux et nutritionnels, l'impact carbone, et plus encore.
+    \item \textbf{Objectifs du Projet}: Aider les utilisateurs à faire des choix de consommation éclairés et responsables. Fournir des informations détaillées et fiables sur les produits scannés. Promouvoir les achats alignés avec les valeurs personnelles des utilisateurs, comme le bio, le local, la qualité, le prix, l'impact carbone, la durabilité de l'emballage, et la possibilité de livraison par la poste.
+    \item \textbf{Fonctionnalités Principales}:
+          \begin{itemize}
+              \item \textbf{Scan de Produit}: Permettre le scan de codes-barres pour identifier rapidement les produits.
+              \item \textbf{Liste des Produits Favoris}: Possibilité d'ajouter des produits à une liste de favoris pour un accès rapide.
+              \item \textbf{S'abonner aux Metadatas}: Configuration de préférences d'achat personnalisées : Local, Bio, Qualité, Prix, Impact carbone, Durabilité de l'emballage, Livrable par la poste.
+              \item \textbf{Sections Détaillées des Métadonnées}:
+                    \begin{itemize}
+                        \item \textbf{Labels}: Affichage des labels et certifications (éco-labels, bio, etc.).
+                        \item \textbf{Évolution du Prix}: Visualisation de l'évolution du prix chez différents fournisseurs.
+                        \item \textbf{Impact Carbone}: Information sur l'empreinte carbone du produit.
+                        \item \textbf{Metadata}: Informations générales (nom du produit, lien vers plus d'infos).
+                    \end{itemize}
+          \end{itemize}
+    \item \textbf{Stack Technologique}: Front-end: Flutter pour une expérience utilisateur cohérente sur iOS, Android et le Web. Back-end: Firebase pour l'authentification, le stockage des données, et les fonctions backend.
+    \item \textbf{Spécifications Techniques}:
+          \begin{itemize}
+              \item \textbf{Exigences Fonctionnelles}: Authentification sécurisée des utilisateurs. Interface intuitive pour le scan de produits et l'affichage des informations. Système de favoris et de préférences personnalisables. Intégration d'APIs externes pour la récupération des données produits.
+              \item \textbf{Exigences Non-Fonctionnelles}: Performances: Temps de réponse rapide pour le scan et l'affichage des données. Accessibilité: Conception inclusive pour une utilisation facile par tous.
+          \end{itemize}
+    \item \textbf{Deadlines}:
+          \begin{itemize}
+              \item Formation groupes et choix du sujet du mini-projet – Semaine 1
+              \item Descriptif du projet (mini cahier de charges) – A remettre avant le cours de la semaine 2
+              \item Validation du projet – semaine 3 – en classe
+              \item Présentations du mini-projet (avec démo) – Semaines 14-15
+              \item Livraison d’un prototype fonctionnel et la rédaction d’un rapport (~15-20 pages). A rendre le lundi avant la dernière séance
+          \end{itemize}
+    \item \textbf{Conclusion}: EthiScan ambitionne de devenir une référence pour les consommateurs souhaitant aligner leurs achats avec leurs valeurs personnelles. Par la transparence et la fourniture d'informations détaillées, l'application vise à promouvoir une consommation plus responsable et éclairée.
+\end{itemize}
+
+\subsection{Planning Actualisé Avant/Après}
+
+\begin{itemize}
+    \item Avant: Formation des groupes et choix du sujet du mini-projet - Semaine 1
+    \item Après: Livraison d’un prototype fonctionnel et la rédaction d’un rapport - Lundi avant la dernière séance
+\end{itemize}
+
+\subsection{Liste des Bugs Connus}
+
+\begin{itemize}
+    \item Erreur de connexion intermittente au service de scan de code-barres.
+    \item Problèmes d'affichage sur certaines versions d'Android.
+    \item Latence lors du chargement des données produits pour les articles récemment ajoutés.
+\end{itemize}
+
+\subsection{Dépendances}
+
+\begin{itemize}
+    \item Flutter
+    \item Firebase
+    \item API externe pour les données produits
+\end{itemize}
+
+\subsection{Aides Extérieures}
+
+\begin{itemize}
+    \item Documentation officielle de Flutter (\url{https://flutter.dev/docs})
+    \item Documentation officielle de Firebase (\url{https://firebase.google.com/docs})
+    \item Discussions avec des collègues pour optimiser les requêtes API.
+\end{itemize}
+
+\end{document}
