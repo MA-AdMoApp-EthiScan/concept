@@ -1,6 +1,47 @@
 \section{Introduction}
-\subsection{Technologie Utilisée}
 
-EthiScan utilise une stack technologique moderne et efficace pour offrir une expérience utilisateur optimale. Le front-end de l'application est développé avec Flutter, permettant une interface utilisateur cohérente et réactive sur iOS, Android et le Web. Le back-end repose sur Firebase, qui fournit une solution robuste pour l'authentification, le stockage des données, et les fonctionnalités backend nécessaires.
+Dans le développement de notre application mobile, nous avons adopté plusieurs technologies modernes pour garantir efficacité, performance et maintenabilité. Cette section présente une vue d'ensemble des technologies utilisées, organisées par front-end et back-end, ainsi que les outils de développement et de déploiement employés.
 
-Flutter, avec sa capacité de compilation native, offre des performances élevées et une excellente réactivité, essentielles pour les fonctionnalités de scan en temps réel. L'utilisation de Firebase permet une gestion sécurisée des données utilisateurs et facilite l'intégration d'APIs externes pour la récupération des données produits.
+\subsection{Vue d'ensemble des technologies}
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Framework principal :} Flutter
+    \item \textbf{Versionnement et CI/CD :} GitHub, GitHub Actions
+    \item \textbf{Authentification :} Firebase Authentication
+    \item \textbf{Base de données :} Firebase Firestore
+    \item \textbf{Scan de codes QR :} Librairie Google
+    \item \textbf{Architecture :} Clean Architecture, Bloc
+    \item \textbf{Automatisation de code :} JSON Serializable, Freezed
+    \item \textbf{Localisation :} Localizations de base de Flutter
+\end{itemize}
+
+\subsection{Front-end}
+
+Pour le développement de l'interface utilisateur, nous avons choisi Flutter comme framework principal. Flutter permet de créer des applications cross-platform, ce qui nous permet de cibler à la fois les utilisateurs Android et iOS avec une seule base de code. Voici quelques-unes des technologies et pratiques clés que nous avons utilisées pour le front-end :
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Flutter :} Framework pour le développement d'interfaces utilisateur.
+    \item \textbf{Bloc :} Utilisé pour la gestion de l'état, assurant une séparation claire des responsabilités et facilitant la testabilité.
+    \item \textbf{Localizations :} Pour supporter plusieurs langues et offrir une expérience utilisateur adaptée à différents marchés.
+    \item \textbf{Librairie Google pour QR code :} Intégrée pour offrir une fonctionnalité de scan rapide et précise.
+\end{itemize}
+
+\subsection{Back-end}
+
+Pour gérer les données et l'authentification, nous avons intégré les services de Firebase, connus pour leur fiabilité et leur facilité d'intégration avec les applications Flutter. Voici les principaux services utilisés :
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Firebase Authentication :} Solution robuste et sécurisée pour la gestion des utilisateurs et leur connexion à l'application.
+    \item \textbf{Firebase Firestore :} Base de données NoSQL flexible et évolutive, idéale pour nos besoins dynamiques.
+\end{itemize}
+
+\subsection{Outils de développement et de déploiement}
+
+Pour assurer une gestion efficace du projet et maintenir une haute qualité de code, nous avons utilisé les outils suivants :
+
+\begin{itemize}[noitemsep]
+    \item \textbf{GitHub :} Plateforme de gestion de code source, facilitant la collaboration entre les membres de l'équipe.
+    \item \textbf{GitHub Actions :} Utilisé pour automatiser le processus de compilation à chaque push de code, et pour exécuter des linters afin de maintenir la cohérence et la qualité du code.
+    \item \textbf{JSON Serializable et Freezed :} Paquets utilisés pour l'automatisation de la sérialisation des objets JSON, réduisant les erreurs manuelles et accélérant le développement.
+\end{itemize}
+

@@ -1,8 +1,17 @@
-\section{Techniques}
 
-\subsection{Quoi et Comment}
+\section{Développement Technique}
 
-EthiScan implémente un système de scan de code-barres qui identifie les produits et récupère des informations à partir de bases de données externes via des API. L'application traite ces données pour afficher les informations pertinentes aux utilisateurs, telles que les labels, l'évolution des prix, et l'impact carbone.
+\subsection{Intégration Continue et Déploiement Continu (CI/CD)}
+
+Pour automatiser le processus de développement et de déploiement de notre application mobile, nous avons mis en place des GitHub Actions. Ces workflows permettent de s'assurer que chaque modification apportée au code est correctement testée et que les versions de l'application sont déployées de manière fluide. Nous avons segmenté notre approche CI/CD en deux parties distinctes : l'intégration continue (CI) et le déploiement continu (CD).
+
+\subsubsection{Intégration Continue (CI)}
+
+L'intégration continue est déclenchée à chaque fois qu'un commit est effectué dans le dépôt GitHub. Le but principal de la CI est de garantir la qualité et la cohérence du codebase. Pour ce faire, nous avons configuré GitHub Actions pour exécuter les tests unitaires et le linter sur l'ensemble du code. En particulier, nous utilisons la commande \texttt{flutter analyze} pour analyser notre code Flutter. Cette analyse permet de détecter les erreurs et les incohérences dans le code, facilitant ainsi la collaboration entre les développeurs et assurant que le code est toujours dans un état prêt à être fusionné.
+
+\subsubsection{Déploiement Continu (CD)}
+
+Le déploiement continu est activé à chaque fois qu'un tag est poussé sur le dépôt. Ce processus comprend la construction de l'application et son déploiement. Nous avons configuré une action pour compiler l'application et générer les fichiers APK nécessaires. Une fois la construction terminée, les fichiers APK sont automatiquement envoyés sur notre groupe Telegram. Ceci permet à l'équipe de disposer immédiatement des nouvelles versions de l'application.
 
 \subsection{Problèmes Rencontrés et Solutions}
 
