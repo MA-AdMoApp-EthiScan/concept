@@ -1,7 +1,128 @@
 \section{UX}
 
-\subsection{Solutions Utilisées}
+\subsection{User Stories}
 
-En termes d'expérience utilisateur (UX), EthiScan met l'accent sur la simplicité et l'efficacité. L'interface utilisateur est conçue pour être intuitive, permettant aux utilisateurs de naviguer facilement entre les différentes fonctionnalités. Le processus de scan de produit est rapide et direct, offrant un retour immédiat et des informations détaillées sur le produit scanné.
+Pour le développement de notre application mobile, nous avons défini plusieurs user stories afin de nous assurer que les besoins des utilisateurs sont pris en compte de manière exhaustive. Voici les user stories que nous avons identifiées :
 
-La personnalisation de l'application, via la configuration des préférences d'achat, permet aux utilisateurs de recevoir des informations spécifiquement alignées avec leurs valeurs et critères personnels. Cette approche centrée sur l'utilisateur renforce l'engagement et améliore l'expérience globale.
+\subsubsection{User Story 1}
+
+\textbf{En tant qu'utilisat.eur.rice, je veux pouvoir scanner un produit pour obtenir des informations détaillées sur celui-ci.}
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Priorité} : Must Have
+    \item \textbf{Difficulté} : Moyen
+    \item \textbf{Critères d'acceptation} :
+          \begin{itemize}[noitemsep]
+              \item L'utilisat.eur.rice peut scanner un produit en utilisant la caméra de son téléphone.
+              \item L'application affiche les informations détaillées du produit scanné (Metadata).
+          \end{itemize}
+    \item \textbf{Histoire} : Alice et Bob sont dans un supermarché et veulent acheter des produits alimentaires. Ils veulent pouvoir scanner les produits pour obtenir des informations détaillées sur ceux-ci. Par exemple, ils veulent savoir si le produit est bio, local, s'il contient des allergènes, etc.
+\end{itemize}
+
+\subsubsection{User Story 2}
+
+\textbf{En tant qu'utilisat.eur.rice, je veux pouvoir ajouter un produit à une liste de favoris pour un accès rapide.}
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Priorité} : Nice to Have
+    \item \textbf{Difficulté} : Facile
+    \item \textbf{Critères d'acceptation} :
+          \begin{itemize}[noitemsep]
+              \item L'utilisat.eur.rice peut ajouter un produit à une liste de favoris.
+              \item L'utilisat.eur.rice peut consulter sa liste de favoris.
+          \end{itemize}
+    \item \textbf{Histoire} : Alice et Bob veulent pouvoir ajouter des produits à une liste de favoris pour un accès rapide. Par exemple, ils veulent pouvoir ajouter des produits qu'ils achètent régulièrement à leur liste de favoris.
+\end{itemize}
+
+\subsubsection{User Story 3}
+
+\textbf{En tant qu'utilisat.eur.rice, je veux pouvoir configurer mes préférences d'achat pour recevoir des informations personnalisées.}
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Priorité} : Must Have
+    \item \textbf{Difficulté} : Moyen
+    \item \textbf{Critères d'acceptation} :
+          \begin{itemize}[noitemsep]
+              \item L'utilisat.eur.rice peut configurer ses préférences d'achat (metadata) (local, bio, qualité, prix, impact carbone, durabilité de l'emballage, livrable par la poste).
+              \item L'application affiche des informations personnalisées en fonction des préférences de l'utilisat.eur.rice.
+          \end{itemize}
+    \item \textbf{Histoire} : Alice a scanné un produit et est abonnée au metadata Labels. Elle cherche à trouver le label bio sur le produit scanné.
+\end{itemize}
+
+\subsubsection{User Story 4}
+
+\textbf{En tant qu'utilisat.eur.rice, je veux pouvoir consulter les labels et certifications des produits scannés (Certification = Metadata).}
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Priorité} : Nice to Have
+    \item \textbf{Difficulté} : Moyen
+    \item \textbf{Critères d'acceptation} :
+          \begin{itemize}[noitemsep]
+              \item L'application affiche les labels et certifications des produits scannés.
+          \end{itemize}
+    \item \textbf{Histoire} : Alice et Bob veulent pouvoir consulter les labels et certifications des produits scannés. Par exemple, ils veulent savoir si le produit est bio, s'il a des labels environnementaux, etc.
+\end{itemize}
+
+\subsubsection{User Story 5}
+
+\textbf{En tant qu'utilisat.eur.rice, je veux pouvoir consulter l'évolution du prix des produits scannés (metadata).}
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Priorité} : Nice to Have
+    \item \textbf{Difficulté} : Moyen
+    \item \textbf{Critères d'acceptation} :
+          \begin{itemize}[noitemsep]
+              \item L'application affiche l'évolution du prix des produits scannés chez différents fournisseurs.
+          \end{itemize}
+    \item \textbf{Histoire} : Alice et Bob veulent pouvoir consulter l'évolution du prix des produits scannés. Par exemple, ils veulent savoir si le prix du produit a augmenté ou diminué récemment.
+\end{itemize}
+
+\subsubsection{User Story 6}
+
+\textbf{En tant qu'utilisat.eur.rice, je veux pouvoir consulter l'impact carbone des produits scannés (metadata).}
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Priorité} : Nice to Have
+    \item \textbf{Difficulté} : Moyen
+    \item \textbf{Critères d'acceptation} :
+          \begin{itemize}[noitemsep]
+              \item L'application affiche l'impact carbone des produits scannés.
+          \end{itemize}
+    \item \textbf{Histoire} : Alice et Bob veulent pouvoir consulter l'impact carbone des produits scannés. Par exemple, ils veulent savoir si le produit a un impact carbone élevé ou faible.
+\end{itemize}
+
+\subsubsection{User Story 7}
+
+\textbf{En tant qu'utilisat.eur.rice je veux pouvoir avoir accès aux données qui m'intéressent pour pouvoir faire mes choix de produits.}
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Priorité} : Must Have
+    \item \textbf{Difficulté} : Moyen
+    \item \textbf{Histoire} : Alice va faire des courses pour l'anniversaire de Bob. Elle est devant le rayon des gâteaux. Elle scanne un gâteau qui lui fait envie. Elle veut connaître les informations suivantes : présence ou non de cacahuètes, d'où viennent les composants, s'il existe des produits équivalents qui consomment moins de CO2.
+\end{itemize}
+
+\subsection{Wireframe}
+
+Après avoir défini les user stories, nous avons créé un wireframe sur Figma pour visualiser l'interface utilisateur de notre application et assurer une cohérence visuelle. Ce wireframe a permis de structurer et d'organiser les différents éléments de l'application, tels que les écrans de scan de produit, la configuration des préférences d'achat, et les listes de favoris. En adoptant un style uniforme, nous avons assuré une expérience utilisateur harmonieuse et intuitive. Ce prototype a servi de base pour le développement, facilitant la collaboration entre les concepteurs et les développeurs, et garantissant que tous les aspects fonctionnels et esthétiques de l'application sont alignés avec les attentes des utilisateurs.
+
+\subsection{Design \& Experience}
+
+Dans le cadre du développement de notre application mobile, nous avons utilisé des composants customisés tout en respectant un design strict afin d'assurer une expérience utilisateur optimale. Nous avons défini une palette de couleurs cohérente et attrayante, qui reflète l'identité de notre application et facilite la navigation pour les utilisateurs. Cette palette de couleurs a été appliquée uniformément à travers tous les composants de l'application pour maintenir une cohérence visuelle et renforcer la reconnaissance de la marque.
+
+Tous les composants de l'application, tels que les boutons, les formulaires, les cartes de produits, et les menus, ont été conçus de manière customisée pour s'adapter à nos besoins spécifiques. Nous avons veillé à ce que chaque composant soit non seulement esthétiquement plaisant mais aussi intuitif et facile à utiliser. Voici quelques-unes des bonnes pratiques en matière d'UX que nous avons implémentées :
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Consistance Visuelle} : En utilisant une typographie cohérente et des icônes uniformes, nous avons assuré que l'interface reste claire et organisée, ce qui facilite la navigation pour les utilisateurs.
+    \item \textbf{Feedback Immédiat} : Chaque action de l'utilisateur, comme cliquer sur un bouton ou scanner un produit, est accompagnée d'un feedback visuel et/ou sonore immédiat pour confirmer que l'action a été enregistrée et est en cours de traitement.
+    \item \textbf{Accessibilité} : Nous avons pris soin d'intégrer des fonctionnalités d'accessibilité telles que des contrastes de couleurs suffisants (pour les daltoniens), des polices de caractères ajustables.
+
+    \item \textbf{Navigation Intuitive} : La structure de navigation a été pensée pour être intuitive, avec un menu en 3 points qui a un certain avantage d'accessibilité.
+
+    \item \textbf{Minimisation de la Charge Cognitive} : En évitant les informations superflues et en présentant les données de manière claire et concise, nous avons réduit la charge cognitive de l'utilisateur, facilitant ainsi la prise de décision rapide et informée.
+
+    \item \textbf{Éléments Tactiles Optimisés} : Les zones tactiles pour les interactions ont été conçues de manière à être suffisamment grandes pour éviter les erreurs de manipulation, et les transitions entre les écrans sont fluides pour offrir une expérience utilisateur agréable, grâce aux push et swap de pages.
+
+    \item \textbf{Simplicité et Clarté} : L'interface a été simplifiée pour que chaque écran ne présente que les informations nécessaires, sans surcharge, afin que les utilisateurs puissent se concentrer sur leur tâche principale sans distractions.
+\end{itemize}
+
+Grâce à l'intégration des bonnes pratiques vu en cours, l'expérience utilisateur est plaisante et agréable.
