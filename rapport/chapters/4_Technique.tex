@@ -1,6 +1,26 @@
 
 \section{Développement Technique}
 
+
+\subsection{Modélisation des Données}
+
+La structure de données d'EthiScan, illustrée dans la figure \ref{fig:diagramme_classe} a été conçue pour permettre une gestion efficace et évolutive des informations produits et des préférences utilisateurs.
+
+La classe principale \texttt{EthiscanUser} représente un utilisateur de l'application, incluant ses produits favoris (\texttt{FavoriteProduct}), ses préférences (\texttt{UserPreferences}), et un Firebase \texttt{User} contenant des informations d'authentification comme l'identifiant, le nom et l'email. Chaque \texttt{FavoriteProduct} référence un \texttt{Product} avec une date d'ajout, permettant à l'utilisateur de suivre ses produits préférés.
+
+La classe \texttt{Product} représente les produits scannés par les utilisateurs. Chaque produit peut avoir une certification (\texttt{Certification}) et est associé à une liste de métadonnées spécifiques (\texttt{ProductMetadata}). Cette séparation entre le type de métadonnées (\texttt{MetadataType}) et les instances spécifiques des métadonnées permet une gestion flexible des différentes informations que les utilisateurs peuvent consulter.
+
+Les fournisseurs (\texttt{Supplier}) sont modélisés pour contenir une liste de produits vendus (\texttt{SoldProduct}), chacun ayant un prix spécifique. Cette approche permet de gérer les variations de prix d'un même produit chez différents fournisseurs.
+
+Enfin, les préférences utilisateur (\texttt{UserPreferences}) sont représentées par une liste de types de métadonnées auxquels l'utilisateur est abonné. Ces abonnements permettent à l'utilisateur de recevoir des informations personnalisées et pertinentes en fonction de ses valeurs et de ses préférences de consommation.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{/home/olivier/projet/advanced_mobile_app/concept/rapport/images/diagramme_classe.png}
+    \caption{Diagramme de classe de l'application}
+    \label{fig:diagramme_classe}
+\end{figure}
+
 \subsection{Intégration Continue et Déploiement Continu (CI/CD)}
 
 Pour automatiser le processus de développement et de déploiement de notre application mobile, nous avons mis en place des GitHub Actions. Ces workflows permettent de s'assurer que chaque modification apportée au code est correctement testée et que les versions de l'application sont déployées de manière fluide. Nous avons segmenté notre approche CI/CD en deux parties distinctes : l'intégration continue (CI) et le déploiement continu (CD).
