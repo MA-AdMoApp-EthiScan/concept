@@ -1,0 +1,122 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cleese Assignment (For Students)
+% LaTeX Template
+% Version 2.0 (27/5/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+\renewcommand{\listalgorithmname}{Liste des algorithmes}
+\floatname{algorithm}{Algorithme}
+\renewcommand{\algorithmicreturn}{\textbf{retourne}}
+\renewcommand{\algorithmicprocedure}{\textbf{procédure}}
+\renewcommand{\And}{\textbf{et}\ }
+\renewcommand{\algorithmicrequire}{\textbf{Entrée:}}
+\renewcommand{\algorithmicensure}{\textbf{Sortie:}}
+\renewcommand{\algorithmicend}{\textbf{fin}}
+\renewcommand{\algorithmicif}{\textbf{si}}
+\renewcommand{\algorithmicthen}{\textbf{alors}}
+\renewcommand{\algorithmicelse}{\textbf{sinon}}
+\renewcommand{\algorithmicfor}{\textbf{pour}}
+\renewcommand{\algorithmicforall}{\textbf{pour tout}}
+\renewcommand{\algorithmicdo}{\textbf{faire}}
+\renewcommand{\algorithmicwhile}{\textbf{tant que}}
+\newcommand{\algorithmicelsif}{\algorithmicelse\ \algorithmicif}
+\newcommand{\algorithmicendif}{\algorithmicend\ \algorithmicif}
+\newcommand{\algorithmicendfor}{\algorithmicend\ \algorithmicfor}
+%\renewcommand{\Comment}[1]{\{#1\}}
+\renewcommand{\Comment}[1]{\raggedright\hfill\small//~#1}
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+% Required
+\newcommand{\assignmentQuestionName}{Question} % The word to be used as a prefix to question numbers; example alternatives: Problem, Exercise
+\newcommand{\assignmentClass}{IoT} % Course/class
+\newcommand{\assignmentTitle}{EthiScan - L'App pour les Consomm'acteurs} % Assignment title or name
+\newcommand{\assignmentAuthorName}{Olivier D'Ancona, Clarisse Fleurimont, Yannis Chamot} % Student name
+
+% Optional (comment lines to remove)
+\newcommand{\assignmentClassInstructor}{Professeur: Pascal Bruegger \& Aïcha Rizzotti} % Intructor name/time/description
+\newcommand{\assignmentDueDate}{Vendredi,\ 14\ Mai\, 2024} % Due date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+
+\clearpage\maketitle % Print the title page
+\setcounter{page}{0}
+\thispagestyle{empty} % Suppress headers and footers on the title page
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\include{chapters/0_abstract}
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+
+\include{chapters/1_Introduction}
+
+%----------------------------------------------------------------------------------------
+%	UX
+%----------------------------------------------------------------------------------------
+
+
+\include{chapters/2_UX}
+
+%----------------------------------------------------------------------------------------
+%	EVALUATIONS
+%----------------------------------------------------------------------------------------
+
+
+\include{chapters/3_Evaluations}
+
+%----------------------------------------------------------------------------------------
+%	TECHNIQUES
+%----------------------------------------------------------------------------------------
+
+
+\include{chapters/4_Technique}
+
+%----------------------------------------------------------------------------------------
+%	ANNEXES
+%----------------------------------------------------------------------------------------
+
+\include{chapters/5_Annexes}
+
+
+\end{document}
