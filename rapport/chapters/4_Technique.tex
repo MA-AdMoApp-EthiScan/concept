@@ -1,6 +1,10 @@
 
 \section{Développement Technique}
 
+\subsection{Internationalisation}
+\label{sec:i18n}
+
+Nous avons localisé notre application avec le mécanisme d'internationalisation (i18n) de Flutter. Concrètement, nous avons créé un fichier utilitaire i18n qui nous permet de gérer les différentes traductions de l'application. Chaque langue est représentée par un fichier de traduction spécifique, dans lequel sont stockées les chaînes de caractères traduites. Le processus de traduction commence par l'identification des chaînes de texte à traduire dans l'application. Ensuite, ces chaînes sont externalisées dans les fichiers de traduction, où chaque langue dispose de ses propres traductions. Grâce à ce système, l'application peut automatiquement afficher le texte dans la langue choisie par l'utilisateur, en fonction des paramètres de son appareil. Bie que nous n'ayons pas eu le temps de traduire toutes les chaînes de texte de l'application, le principe de l'internationalisation est entièrement implémenté et fonctionnel. Ainsi, l'ajout de nouvelles traductions peut se faire rapidement et efficacement à mesure que de nouvelles langues sont prises en charge ou que de nouvelles chaînes de texte sont ajoutées à l'application.
 
 \subsection{Modélisation des Données}
 
