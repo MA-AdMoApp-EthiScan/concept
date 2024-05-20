@@ -1,6 +1,6 @@
 classDiagram
     class EthiscanUser {
-        User user
+        String uid
         List~FavoriteProduct~ favoriteProducts
         List~String~ metadataTypeIds
     }
