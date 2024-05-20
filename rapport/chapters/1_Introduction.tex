@@ -1,8 +1,17 @@
 \section{Introduction}
 
-Dans le développement de notre application mobile, nous avons adopté plusieurs technologies modernes pour garantir efficacité, performance et maintenabilité. Cette section présente une vue d'ensemble des technologies utilisées, organisées par front-end et back-end, ainsi que les outils de développement et de déploiement employés.
+\subsection{Motivation}
+
+Dans un monde où les consommateurs sont de plus en plus conscients des implications éthiques, environnementales et sanitaires de leurs achats, il est crucial de fournir des outils qui permettent de faire des choix éclairés. L'application Etiscan a été conçue pour répondre à ce besoin croissant. En scannant des produits, les utilisateurs peuvent obtenir des métadonnées détaillées et pertinentes sur ceux-ci. Ces informations permettent de savoir si un produit est local, équitable, biologique, ou répond à d'autres critères spécifiques que l'utilisateur juge importants. Etiscan offre une solution moderne et pratique pour aligner les choix de consommation avec les valeurs personnelles des individus.
+
+\subsection{Concept}
+
+L'application Etiscan se distingue par son approche innovante et personnalisée des métadonnées de produits. Contrairement à des applications existantes comme Yuka \cite{yuka}, qui se concentrent uniquement sur les métadonnées alimentaires, Etiscan vise à créer une plateforme versatile où les utilisateurs peuvent s'abonner aux types de métadonnées qui leur importent le plus. Des mainteneurs spécialisés testent les produits et certifient les informations, assurant ainsi la fiabilité des données fournies. Cette plateforme unique ambitionne de rassembler une large base d'utilisateurs en leur offrant une solution intégrée et complète pour suivre les produits en fonction de leurs préférences et convictions personnelles. En facilitant l'accès à des informations détaillées et certifiées, Etiscan se positionne comme un outil indispensable pour les consommateurs modernes et responsables.
+
 
 \subsection{Vue d'ensemble des technologies}
+
+Dans le développement de notre application mobile, nous avons adopté plusieurs technologies modernes pour garantir efficacité, performance et maintenabilité. Cette section présente une vue d'ensemble des technologies utilisées, organisées par front-end et back-end, ainsi que les outils de développement et de déploiement employés.
 
 \begin{itemize}[noitemsep]
     \item \textbf{Framework principal :} Flutter
@@ -45,3 +54,26 @@ Pour assurer une gestion efficace du projet et maintenir une haute qualité de c
     \item \textbf{JSON Serializable et Freezed :} Paquets utilisés pour l'automatisation de la sérialisation des objets JSON, réduisant les erreurs manuelles et accélérant le développement.
 \end{itemize}
 
+\subsection{Architecture}
+
+Pour garantir la robustesse et la maintenabilité de notre application Flutter, nous avons adopté le principe de la Clean Architecture \cite{cleanArchitecture}. Ce paradigme architectural permet une séparation claire des responsabilités, divisant le projet en plusieurs couches distinctes :
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Domain Layer} : Cette couche contient la logique métier et les entités de l'application. Elle est indépendante des détails d'implémentation et des frameworks, ce qui facilite les tests unitaires et la réutilisation du code.
+    \item \textbf{Data Layer} : Responsable de la gestion des sources de données (API, bases de données locales, etc.), cette couche implémente les interfaces définies dans la couche Domain. Elle assure également la conversion des données entre les formats utilisés par les sources externes et les entités du domaine.
+    \item \textbf{Repository Layer} : Les repositories servent d'intermédiaires entre la couche Domain et la couche Data. Ils encapsulent la logique de récupération et de persistance des données, offrant une interface simplifiée pour les use cases de l'application.
+    \item \textbf{Presentation Layer} : Cette couche gère l'interface utilisateur et les interactions. Elle utilise les données fournies par les use cases pour mettre à jour l'état de l'interface.
+\end{itemize}
+
+En plus de la Clean Architecture, nous avons implémenté le pattern Bloc (Business Logic Component) pour la gestion des états \cite{blocPattern}. Le pattern Bloc facilite la séparation entre la logique de présentation et la logique métier, en utilisant des flux de données réactifs (Streams). Chaque Bloc gère un état spécifique de l'application et réagit aux événements émis par l'interface utilisateur pour produire de nouveaux états.
+
+La combinaison de la Clean Architecture et du pattern Bloc nous a permis de concevoir une architecture modulaire, testable et évolutive. Cette approche nous a permis d'obtenir une application à la fois robuste et professionnelle, répondant aux exigences de qualité nécessaires pour un projet de cette envergure.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/firebase-architecture-BLoC.jpeg}
+    \caption{Clean Architecture et BLoC pour la structure de l'application. (image récupérée sur \cite{googleCloudArchitecture})
+    }
+    \label{fig:architecture}
+\end{figure}
