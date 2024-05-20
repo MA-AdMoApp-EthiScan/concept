@@ -2,3 +2,18 @@
 \subsection{Évaluations Implémentées}
 
 L'évaluation de l'application s'est concentrée sur la performance, l'exactitude des données, et la satisfaction utilisateur. Des tests de performance ont été réalisés pour s'assurer que l'application répond rapidement aux requêtes de scan. L'exactitude des informations fournies a été vérifiée contre des sources externes pour garantir la fiabilité des données. Enfin, des enquêtes de satisfaction utilisateur ont aidé à recueillir des retours sur l'expérience d'utilisation, permettant d'identifier les domaines d'amélioration.
+
+\subsection{Tests unitaires}
+
+Afin de garantir la fiabilité et la robustesse de notre application mobile, nous avons mis en place une série de tests unitaires. Les tests unitaires sont essentiels pour vérifier que chaque composant de l'application fonctionne correctement de manière isolée.
+
+Notre application utilise Firebase pour la gestion des données et l'authentification des utilisateurs, spécifiquement Firestore pour la base de données et Firebase Authentication pour la gestion des utilisateurs \ref{sec:architecture}. Étant donné que Firebase est une plateforme de services cloud, il est nécessaire d'utiliser des outils de mocking pour simuler les interactions avec ces services lors des tests unitaires.
+
+Pour ce faire, nous avons intégré plusieurs librairies de mocking dans notre suite de tests :
+
+\begin{itemize}
+    \item \textbf{Mockito} : Cette librairie nous permet de créer des objets mock et de définir le comportement attendu de ces objets lors des tests. Elle est utilisée pour simuler les interactions avec diverses dépendances de notre application.
+    \item \textbf{MockFirebaseFirestore} : Cette librairie est utilisée pour simuler les opérations de la base de données Firestore. Elle permet de créer des collections et des documents fictifs, de simuler les requêtes et de vérifier les interactions avec Firestore sans nécessiter une connexion réelle à la base de données.
+    \item \textbf{MockAuthentication} : Cette librairie est utilisée pour simuler les opérations d'authentification de Firebase. Elle permet de tester des scénarios d'inscription, de connexion et de déconnexion des utilisateurs sans interagir avec le service d'authentification réel.
+\end{itemize}
+

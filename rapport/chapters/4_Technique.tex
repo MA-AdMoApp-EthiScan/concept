@@ -62,16 +62,20 @@ Pour accélérer le développement, nous avons intégré le package \texttt{Free
 
 La combinaison de Flutter et Firebase a prouvé son efficacité pour développer une application mobile performante et réactive. L'architecture choisie a permis une mise en œuvre rapide des fonctionnalités tout en maintenant une haute qualité et fiabilité des données.
 
-\subsection{Auto-Critique du Code}
+\section{Auto-Critique du Code}
 
-\subsubsection{Points Positifs}
+\subsection{Points Positifs}
 \begin{itemize}
     \item Code bien structuré et commenté, facilitant la maintenance et les mises à jour.
     \item Utilisation efficace des patterns de conception pour une architecture solide.
 \end{itemize}
 
-\subsubsection{Points à Améliorer}
-\begin{itemize}
-    \item Couverture des tests unitaires à augmenter pour assurer une meilleure stabilité.
-    \item Optimisation possible de certaines requêtes de données pour accélérer les temps de réponse.
-\end{itemize}
+\subsection{Points à Améliorer}
+
+Pour améliorer le développement de notre application mobile, nous avons identifié plusieurs aspects nécessitant des améliorations.
+
+\paragraph{Augmentation de la couverture des tests unitaires}
+Actuellement, la couverture de code par nos tests unitaires est insuffisante. Les tests unitaires sont très limités et ne couvrent pas l'ensemble des fonctionnalités critiques de l'application. Pour garantir une meilleure qualité et fiabilité du code, il est impératif d'augmenter la couverture des tests unitaires. Cela inclut l'ajout de tests pour les cas limites, les scénarios d'erreur, ainsi que les interactions complexes entre les différents composants de l'application.
+
+\paragraph{Renforcement de la sécurité des données}
+Pour des raisons de développement, les règles de sécurité de notre base de données Firestore sont actuellement complètement ouvertes. Cette configuration est inadmissible dans un environnement de production réel. Il est crucial de mettre en place des règles de sécurité strictes afin de gérer correctement les autorisations des utilisateurs. Chaque utilisateur doit uniquement pouvoir accéder et modifier ses propres données. Par exemple, les règles de sécurité doivent garantir qu'un utilisateur ne puisse pas supprimer ou accéder aux produits favoris d'un autre utilisateur. Le renforcement de ces mesures de sécurité est impératif pour la mise en production de l'application.
