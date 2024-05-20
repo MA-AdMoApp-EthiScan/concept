@@ -1,4 +1,3 @@
-
 \section{Développement Technique}
 
 \subsection{Peuplement de la base de données}
@@ -11,6 +10,7 @@ Pour peupler la base de données de notre application, nous avons rassemblé des
 Nous avons localisé notre application avec le mécanisme d'internationalisation (i18n) de Flutter. Concrètement, nous avons créé un fichier utilitaire i18n qui nous permet de gérer les différentes traductions de l'application. Chaque langue est représentée par un fichier de traduction spécifique, dans lequel sont stockées les chaînes de caractères traduites. Le processus de traduction commence par l'identification des chaînes de texte à traduire dans l'application. Ensuite, ces chaînes sont externalisées dans les fichiers de traduction, où chaque langue dispose de ses propres traductions. Grâce à ce système, l'application peut automatiquement afficher le texte dans la langue choisie par l'utilisateur, en fonction des paramètres de son appareil. Bie que nous n'ayons pas eu le temps de traduire toutes les chaînes de texte de l'application, le principe de l'internationalisation est entièrement implémenté et fonctionnel. Ainsi, l'ajout de nouvelles traductions peut se faire rapidement et efficacement à mesure que de nouvelles langues sont prises en charge ou que de nouvelles chaînes de texte sont ajoutées à l'application.
 
 \subsection{Modélisation des Données}
+\label{sec:data_model}
 
 La structure de données d'EthiScan, illustrée dans la figure \ref{fig:diagramme_classe} a été conçue pour permettre une gestion efficace et évolutive des informations produits et des préférences utilisateurs.
 
@@ -30,7 +30,7 @@ Enfin, les préférences utilisateur (\texttt{UserPreferences}) sont représent�
 \end{figure}
 
 \subsection{Intégration Continue et Déploiement Continu (CI/CD)}
-
+\label{sec:ci_cd}
 Pour automatiser le processus de développement et de déploiement de notre application mobile, nous avons mis en place des GitHub Actions. Ces workflows permettent de s'assurer que chaque modification apportée au code est correctement testée et que les versions de l'application sont déployées de manière fluide. Nous avons segmenté notre approche CI/CD en deux parties distinctes : l'intégration continue (CI) et le déploiement continu (CD).
 
 \subsubsection{Intégration Continue (CI)}
@@ -42,6 +42,7 @@ L'intégration continue est déclenchée à chaque fois qu'un commit est effectu
 Le déploiement continu est activé à chaque fois qu'un tag est poussé sur le dépôt. Ce processus comprend la construction de l'application et son déploiement. Nous avons configuré une action pour compiler l'application et générer les fichiers APK nécessaires. Une fois la construction terminée, les fichiers APK sont automatiquement envoyés sur notre groupe Telegram. Ceci permet à l'équipe de disposer immédiatement des nouvelles versions de l'application.
 
 \subsection{Problèmes Rencontrés et Solutions}
+\label{sec:problems}
 
 \paragraph{Version des dépendances} Lors du développement, nous avons rencontré un problème majeur lié à la gestion des versions de Flutter utilisées par les différents membres de l'équipe. En effet, nous avons constaté qu'une personne utilisait la version 3.22 de Flutter, tandis que d'autres travaillaient avec la version 3.19. Cette disparité de versions a causé des conflits lors de l'intégration de nouvelles dépendances. Par exemple, certaines dépendances étaient compatibles avec une version de Flutter mais pas avec l'autre, ce qui a entraîné des erreurs de compilation. La synchronisation des versions de Flutter entre tous les membres de l'équipe s'est avérée difficile. Nous avions le choix entre downgrade Flutter ou de résoudre les conflits avec la dernière version. Nous avons opté pour la deuxième option, car elle nous permettait de bénéficier des dernières fonctionnalités et correctifs de Flutter. Cependant, cela a nécessité un effort supplémentaire pour résoudre les conflits et garantir la compatibilité des dépendances avec la version la plus récente de Flutter.
 
@@ -53,6 +54,8 @@ Le déploiement continu est activé à chaque fois qu'un tag est poussé sur le 
 
 \paragraph{Déploiement Continu} Le déploiement a posé quelques difficultés, principalement liées à la gestion sécurisée du fichier \texttt{google-service.json}, indispensable pour la construction et le déploiement de l'application sur notre groupe Telegram. Comme ce fichier contient des informations sensibles, nous devons le sécuriser et le stocker dans un endroit accessible par notre pipeline CI/CD. Pour résoudre ce problème, nous avons décidé de stocker \texttt{google-service.json} en tant que action secret dans GitHub. Cependant, un problème de formatage est apparu lors de la gestion de ce secret. Pour le surmonter, nous avons encodé le fichier en base64 avant de le stocker dans GitHub Secrets. Ce qui a résolu le problème de formatage et nous a permis de déployer l'application avec succès de manière sécurisée.
 
+\paragraph{Développement Automatisé}
+Pour accélérer le développement, nous avons intégré le package \texttt{Freezed} et encore le package \texttt{json\_encode}, destiné à compiler et générer automatiquement certaines parties du code. Cette automatisation vise à réduire le code répétitif, augmentant ainsi notre productivité et permettant de se concentrer sur des aspects plus critiques du développement. Cependant, l'introduction de ce package a posé des défis pour un membre de l'équipe non familier avec cette technologie. En effet, il rencontrait des difficultés à déboguer son code, n'ayant pas une maîtrise complète des processus automatisés par \texttt{Freezed}. Ce manque de compréhension a entraîné des erreurs de compilation et une perte de temps significative pour cette personne, contrebalançant ainsi les bénéfices attendus de l'automatisation. Pour résoudre ce problème, nous avons organisé une session de discussion afin de clarifier l'utilisation du script \texttt{Freezed} et de bien séparer les concepts. Après cette mise au point, il n'a plus rencontré de problèmes de compilation, et l'équipe a pu bénéficier pleinement des gains de productivité promis par l'automatisation. Cette expérience souligne l'importance de l'accompagnement et de la formation lors de l'intégration de nouvelles technologies dans un projet de développement.
 
 
 \subsection{Conclusion Technique}
