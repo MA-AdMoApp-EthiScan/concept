@@ -65,10 +65,19 @@ La combinaison de Flutter et Firebase a prouvé son efficacité pour développer
 \section{Auto-Critique du Code}
 
 \subsection{Points Positifs}
-\begin{itemize}
-    \item Code bien structuré et commenté, facilitant la maintenance et les mises à jour.
-    \item Utilisation efficace des patterns de conception pour une architecture solide.
-\end{itemize}
+
+\paragraph{Flexibilité}
+L'implémentation partielle de la clean architecture dans notre application nous offre une flexibilité en termes de gestion des providers de données. Par exemple, si nous décidons de remplacer \texttt{Firebase} par \texttt{Supabase} par exemple, il suffit de réimplémenter les datasources sans modifier le reste de l'application. Cette modularité nous rend résilients face aux évolutions technologiques et aux changements de fournisseurs de services, assurant ainsi la pérennité de notre application.
+
+\paragraph{Modélisation robuste des données}
+Notre application bénéficie d'une modélisation des données bien structurée et robuste. Cette modélisation permet non seulement de gérer efficacement les données actuelles, mais aussi de faire évoluer le système pour accueillir plusieurs centaines de milliers d'utilisateurs si nécessaire. Grâce à cette architecture scalable, notre application est prête à grandir et à s'adapter aux besoins croissants des utilisateurs, garantissant une performance et une fiabilité optimales à long terme.
+
+\paragraph{Pratiques de développement logiciel}
+Nous avons implémenté de nombreuses pratiques de développement logiciel qui ont grandement facilité notre travail. L'intégration continue (CI) et le déploiement continu (CD) nous permettent d'automatiser les processus de test et de déploiement, assurant une détection rapide des erreurs et des mises à jour fluides de l'application. L'internationalisation a été intégrée pour rendre notre application accessible à un public mondial. De plus, en utilisant la clean architecture, nous avons structuré notre code de manière modulaire et maintenable. L'utilisation de GitHub pour la gestion de version, avec des branches et des pull requests, a amélioré notre collaboration et notre efficacité. Toutes ces pratiques combinées a augmenté notre productivité et nous a aidé à maintenir une haute qualité de code.
+
+
+
+
 
 \subsection{Points à Améliorer}
 
@@ -79,3 +88,7 @@ Actuellement, la couverture de code par nos tests unitaires est insuffisante. Le
 
 \paragraph{Renforcement de la sécurité des données}
 Pour des raisons de développement, les règles de sécurité de notre base de données Firestore sont actuellement complètement ouvertes. Cette configuration est inadmissible dans un environnement de production réel. Il est crucial de mettre en place des règles de sécurité strictes afin de gérer correctement les autorisations des utilisateurs. Chaque utilisateur doit uniquement pouvoir accéder et modifier ses propres données. Par exemple, les règles de sécurité doivent garantir qu'un utilisateur ne puisse pas supprimer ou accéder aux produits favoris d'un autre utilisateur. Le renforcement de ces mesures de sécurité est impératif pour la mise en production de l'application.
+
+\paragraph{Amélioration de la clean architecture}
+Actuellement, notre implémentation de la clean architecture est partielle. Les blocs gèrent directement les use cases, ce qui va à l'encontre des principes de séparation des préoccupations et rend les blocs plus difficiles à tester et complexes à maintenir. Pour se rapprocher davantage de la clean architecture, il serait judicieux de séparer les use cases des blocs. Les use cases doivent être implémentés de manière indépendante et injectés dans les blocs, ce qui facilitera les tests unitaires et simplifiera le code.
+
