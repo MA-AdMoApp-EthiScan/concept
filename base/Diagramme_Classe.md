@@ -2,11 +2,11 @@ classDiagram
     class EthiscanUser {
         User user
         List~FavoriteProduct~ favoriteProducts
-        UserPreferences userPreferences
+        List~String~ metadataTypeIds
     }
 
     class FavoriteProduct {
-        Product product
+        String productId
         DateTime addedAt
     }
 
@@ -15,11 +15,12 @@ classDiagram
         String name
         String imageUrl
         String description
-        Certification certification
-        List~ProductMetadata~ productMetadatas
+        List~String~ certificationIds
+        List~String~ productMetadataIds
     }
 
     class Certification {
+        String id
         String name
         String description
         String imageUrl
@@ -31,31 +32,29 @@ classDiagram
     }
 
     class SoldProduct {
-        Product product
+        String productId
         double price
     }
 
     class MetadataType {
+        String id
         String name
         Map~String, dynamic~ schema
     }
 
     class ProductMetadata {
-        MetadataType type
+        String id
+        String metadataTypeId
         Map~String, dynamic~ data
-    }
-
-    class UserPreferences {
-        List~MetadataType~ metadataSubscriptions
     }
 
     EthiscanUser --> User : 1
     EthiscanUser --> FavoriteProduct : 0..* contains
-    EthiscanUser --> UserPreferences : 1 has
+    EthiscanUser --> MetadataType : 0..* subscribes to
 
-    FavoriteProduct --> Product : 1 contains
+    FavoriteProduct --> Product : 1 refers to
 
-    Product --> Certification : 0..1 has
+    Product --> Certification : 0..* refers to
     Product --> ProductMetadata : 0..* has many
 
     Supplier --> SoldProduct : 0..* sells
@@ -63,5 +62,3 @@ classDiagram
     SoldProduct --> Product : 1 refers to
 
     ProductMetadata --> MetadataType : 1 has
-
-    UserPreferences --> MetadataType : 0..* subscribes to
