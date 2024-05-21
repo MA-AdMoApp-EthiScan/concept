@@ -2,11 +2,11 @@
 
 \subsection{Motivation}
 
-Dans un monde où les consommateurs sont de plus en plus conscients des implications éthiques, environnementales et sanitaires de leurs achats, il est crucial de fournir des outils qui permettent de faire des choix éclairés. L'application Etiscan a été conçue pour répondre à ce besoin croissant. En scannant des produits, les utilisateurs peuvent obtenir des métadonnées détaillées et pertinentes sur ceux-ci. Ces informations permettent de savoir si un produit est local, équitable, biologique, ou répond à d'autres critères spécifiques que l'utilisateur juge importants. Etiscan offre une solution moderne et pratique pour aligner les choix de consommation avec les valeurs personnelles des individus.
+Dans un monde où les consommateurs sont de plus en plus conscients des implications éthiques, environnementales et sanitaires de leurs achats, il est crucial de fournir des outils qui permettent de faire des choix éclairés. L'application Ethiscan a été conçue pour répondre à ce besoin croissant. En scannant des produits, les utilisateurs peuvent obtenir des métadonnées détaillées et pertinentes sur ceux-ci. Ces informations permettent de savoir si un produit est local, équitable, biologique, ou répond à d'autres critères spécifiques que l'utilisateur juge importants. Ethiscan offre une solution moderne et pratique pour aligner les choix de consommation avec les valeurs personnelles des individus.
 
 \subsection{Concept}
 
-L'application Etiscan se distingue par son approche innovante et personnalisée des métadonnées de produits. Contrairement à des applications existantes comme Yuka \cite{yuka}, qui se concentrent uniquement sur les métadonnées alimentaires, Etiscan vise à créer une plateforme versatile où les utilisateurs peuvent s'abonner aux types de métadonnées qui leur importent le plus. Des mainteneurs spécialisés testent les produits et certifient les informations, assurant ainsi la fiabilité des données fournies. Cette plateforme unique ambitionne de rassembler une large base d'utilisateurs en leur offrant une solution intégrée et complète pour suivre les produits en fonction de leurs préférences et convictions personnelles. En facilitant l'accès à des informations détaillées et certifiées, Etiscan se positionne comme un outil indispensable pour les consommateurs modernes et responsables.
+L'application Ethiscan se distingue par son approche innovante et personnalisée des métadonnées de produits. Contrairement à des applications existantes comme Yuka \cite{yuka}, qui se concentrent uniquement sur les métadonnées alimentaires, Ethiscan vise à créer une plateforme versatile où les utilisateurs peuvent s'abonner aux types de métadonnées qui leur importent le plus. Des mainteneurs spécialisés testent les produits et certifient les informations, assurant ainsi la fiabilité des données fournies. Cette plateforme unique ambitionne de rassembler une large base d'utilisateurs en leur offrant une solution intégrée et complète pour suivre les produits en fonction de leurs préférences et convictions personnelles. En facilitant l'accès à des informations détaillées et certifiées, Ethiscan se positionne comme un outil indispensable pour les consommateurs modernes et responsables.
 
 
 \subsection{Vue d'ensemble des technologies}
@@ -44,13 +44,13 @@ Nous avons considéré différentes technologies pour stocker nos données avant
 \begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|}
-    \hline
-    \textbf{Technologie} & \textbf{Principales Fonctionnalités} & \textbf{Différences Notables} \\
-    \hline
-    SQFLite & Stockage SQL local fiable, contrôle fin des requêtes & Nécessite des connaissances en SQL \\
-    \hline
-    Drift & local, ORM avec sécurité des types, intégration réactive & Abstrait la complexité de SQLite \\
-    \hline
+        \hline
+        \textbf{Technologie} & \textbf{Principales Fonctionnalités}                     & \textbf{Différences Notables}      \\
+        \hline
+        SQFLite              & Stockage SQL local fiable, contrôle fin des requêtes     & Nécessite des connaissances en SQL \\
+        \hline
+        Drift                & local, ORM avec sécurité des types, intégration réactive & Abstrait la complexité de SQLite   \\
+        \hline
     \end{tabular}
     \caption{Technologies SQL pour Flutter}
 \end{table}
@@ -60,21 +60,21 @@ Nous avons considéré différentes technologies pour stocker nos données avant
 \begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|}
-    \hline
-    \textbf{Technologie} & \textbf{Principales Fonctionnalités} & \textbf{Différences Notables} \\
-    \hline
-    Firebase Firestore & Base de données cloud scalable, synchronisation en temps réel & Coûts potentiels à grande échelle \\
-    \hline
-    Supabase & PostgreSQL open-source avec fonctionnalités en temps réel & Moins mature que Firebase \\
-    \hline
-    Flutter Storage & Stockage local simple et rapide pour paires clé-valeur & Fonctionnalités limitées \\
-    \hline
-    Hive & Base de données NoSQL rapide, légère et local & Moins flexible pour des requêtes complexes \\
-    \hline
-    ObjectBox & Base de données orientée objet performante local& Plus complexe à intégrer pour des projets simples \\
-    \hline
-    Shared Preferences & Stockage local clé-valeur simple et rapide & Pas adapté pour des données complexes ou volumineuses \\
-    \hline
+        \hline
+        \textbf{Technologie} & \textbf{Principales Fonctionnalités}                          & \textbf{Différences Notables}                         \\
+        \hline
+        Firebase Firestore   & Base de données cloud scalable, synchronisation en temps réel & Coûts potentiels à grande échelle                     \\
+        \hline
+        Supabase             & PostgreSQL open-source avec fonctionnalités en temps réel     & Moins mature que Firebase                             \\
+        \hline
+        Flutter Storage      & Stockage local simple et rapide pour paires clé-valeur        & Fonctionnalités limitées                              \\
+        \hline
+        Hive                 & Base de données NoSQL rapide, légère et local                 & Moins flexible pour des requêtes complexes            \\
+        \hline
+        ObjectBox            & Base de données orientée objet performante local              & Plus complexe à intégrer pour des projets simples     \\
+        \hline
+        Shared Preferences   & Stockage local clé-valeur simple et rapide                    & Pas adapté pour des données complexes ou volumineuses \\
+        \hline
     \end{tabular}
     \caption{Technologies NoSQL pour Flutter}
 \end{table}
@@ -109,7 +109,7 @@ Pour garantir la robustesse et la maintenabilité de notre application Flutter, 
 
 En plus de la Clean Architecture, nous avons implémenté le pattern Bloc (Business Logic Component) pour la gestion des états \cite{blocPattern}. Le pattern Bloc facilite la séparation entre la logique de présentation et la logique métier, en utilisant des flux de données réactifs (Streams). Chaque Bloc gère un état spécifique de l'application et réagit aux événements émis par l'interface utilisateur pour produire de nouveaux états.
 
-La combinaison de la Clean Architecture et du pattern Bloc nous a permis de concevoir une architecture modulaire, testable et évolutive. Cette approche nous a permis d'obtenir une application à la fois robuste et professionnelle, répondant aux exigences de qualité nécessaires pour un projet de cette envergure.
+La combinaison de la Clean Architecture et du pattern Bloc nous a permis de concevoir une architecture modulaire, testable et évolutive. Cette approche nous a permis de créer une application à la fois robuste et professionnelle, répondant aux exigences de qualité nécessaires pour un projet de cette envergure.
 
 
 \begin{figure}[H]
