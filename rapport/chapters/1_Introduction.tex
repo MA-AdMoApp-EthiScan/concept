@@ -31,58 +31,45 @@ Pour le développement de l'interface utilisateur, nous avons choisi Flutter com
 \begin{itemize}[noitemsep]
     \item \textbf{Flutter :} Framework pour le développement d'interfaces utilisateur.
     \item \textbf{Bloc :} Utilisé pour la gestion de l'état, assurant une séparation claire des responsabilités et facilitant la testabilité.
-    \item \textbf{Localizations :} Pour supporter plusieurs langues et offrir une expérience utilisateur adaptée à différents marchés.
-    \item \textbf{Librairie Google pour QR code :} Intégrée pour offrir une fonctionnalité de scan rapide et précise.
+    \item \textbf{I18n :} Pour supporter plusieurs langues et offrir une expérience utilisateur adaptée à différents marchés.
+    \item \textbf{Google MlKit Barcode Scanning :} Intégrée pour offrir une fonctionnalité de scan rapide et précise.
 \end{itemize}
 
-\subsection{technologies de stockages}
+\subsection{Technologies de Stockage}
 
-Nous avons considéré différentes technologies pour stocker nos données avant de décider d'utiliser Firebase. Voici un aperçu de ces technologies de stockage utilisables sur Flutter, classées en deux catégories : SQL et NoSQL.
-
-\subsubsection{SQL}
+Nous avons considéré différentes technologies pour stocker nos données avant de se tourner vers Firebase. Le tableau \ref{tab:technologies_stockage} récapitule les différentes technologies avec leurs caractéristiques clés :
 
 \begin{table}[h!]
     \centering
-    \begin{tabular}{|c|c|c|}
-        \hline
-        \textbf{Technologie} & \textbf{Principales Fonctionnalités}                     & \textbf{Différences Notables}      \\
-        \hline
-        SQFLite              & Stockage SQL local fiable, contrôle fin des requêtes     & Nécessite des connaissances en SQL \\
-        \hline
-        Drift                & local, ORM avec sécurité des types, intégration réactive & Abstrait la complexité de SQLite   \\
-        \hline
-    \end{tabular}
-    \caption{Technologies SQL pour Flutter}
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Technologie} & \textbf{Type} & \textbf{Scalabilité} & \textbf{Expérience} & \textbf{Services Complémentaires} & \textbf{Coûts} & \textbf{Cloud} \\
+            \hline
+            SQFLite              & SQL           & Limitée              & Faible              & Non                               & Gratuit        & Non            \\
+            \hline
+            Drift                & SQL           & Limitée              & Faible              & Non                               & Gratuit        & Non            \\
+            \hline
+            Firebase Firestore   & NoSQL         & Haute                & Élevée              & Authentification, Analytics       & Gratuit/Tier   & Oui            \\
+            \hline
+            Supabase             & NoSQL         & Haute                & Moyenne             & Authentification, API             & Variable       & Oui            \\
+            \hline
+            Flutter Storage      & NoSQL         & Limitée              & Moyenne             & Non                               & Gratuit        & Non            \\
+            \hline
+            Hive                 & NoSQL         & Limitée              & Faible              & Non                               & Gratuit        & Non            \\
+            \hline
+            ObjectBox            & NoSQL         & Haute                & Faible              & Sync, GraphQL API                 & Variable       & Oui            \\
+            \hline
+            Shared Preferences   & NoSQL         & Limitée              & Moyenne             & Non                               & Gratuit        & Non            \\
+            \hline
+        \end{tabular}
+    }
+    \caption{Comparatif des technologies de stockage pour Flutter}
+    \label{tab:technologies_stockage}
 \end{table}
 
-\subsubsection{No SQL}
-
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|c|c|c|}
-        \hline
-        \textbf{Technologie} & \textbf{Principales Fonctionnalités}                          & \textbf{Différences Notables}                         \\
-        \hline
-        Firebase Firestore   & Base de données cloud scalable, synchronisation en temps réel & Coûts potentiels à grande échelle                     \\
-        \hline
-        Supabase             & PostgreSQL open-source avec fonctionnalités en temps réel     & Moins mature que Firebase                             \\
-        \hline
-        Flutter Storage      & Stockage local simple et rapide pour paires clé-valeur        & Fonctionnalités limitées                              \\
-        \hline
-        Hive                 & Base de données NoSQL rapide, légère et local                 & Moins flexible pour des requêtes complexes            \\
-        \hline
-        ObjectBox            & Base de données orientée objet performante local              & Plus complexe à intégrer pour des projets simples     \\
-        \hline
-        Shared Preferences   & Stockage local clé-valeur simple et rapide                    & Pas adapté pour des données complexes ou volumineuses \\
-        \hline
-    \end{tabular}
-    \caption{Technologies NoSQL pour Flutter}
-\end{table}
-
-\subsubsection{Choix de technologies de stockage}
-
-Il était important pour nous d'avoir une base de données sur un cloud afin de pouvoir accéder aux données des produits scannés. Il ne nous restait donc que Firebase Firestore et Supabase. Nous avons décidé d'utiliser Firebase Firestore car un membre de notre équipe avait déjà de l'expérience avec cette Technologie. En plus de ça Firebase propose un tier gratuit et permet aussi le travail collaboratif. Un autre gros avantage de Firebase est qu'ils proposent un service d'authentification : Firebase Authentication qui est une solution robuste et sécurisée pour la gestion des utilisateurs et leur connexion à l'application. Service qui est nécessaire pour notre application.
-
+\subsubsection{Choix de Technologie}
+Nous avons choisi Firebase Firestore pour plusieurs raisons clés. En tant que base de données NoSQL, elle élimine l'impedance mismatch, simplifiant ainsi le développement. Firebase est gratuit dans son tier initial, ce qui est idéal pour démarrer sans coûts initiaux. Étant basé dans le cloud, il permet une synchronisation en temps réel des données. De plus, Firebase offre des services intégrés tels que l'authentification et les analytics, réduisant ainsi le besoin de solutions tierces. L'expérience préalable d'un membre de notre équipe avec cette technologie a également été un atout majeur. En somme, Firebase Firestore s'est avéré être la solution idéale, offrant une intégration simplifiée, des coûts initiaux réduits, des services complets, et une accélération du développement sans nécessiter de backend complexe.
 
 
 \subsection{Outils de développement et de déploiement}
