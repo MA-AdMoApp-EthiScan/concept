@@ -45,10 +45,19 @@ L'intégration continue est déclenchée à chaque fois qu'un commit est effectu
 
 \subsubsection{Déploiement Continu (CD)}
 
-Le déploiement continu est activé à chaque fois qu'un tag est poussé sur le dépôt. Ce processus comprend la construction de l'application et son déploiement. Nous avons configuré une action pour compiler l'application et générer les fichiers APK nécessaires. Une fois la construction terminée, les fichiers APK sont automatiquement envoyés sur notre groupe Telegram. Ceci permet à l'équipe de disposer immédiatement des nouvelles versions de l'application.
+Le déploiement continu est activé à chaque fois qu'un tag est poussé sur le dépôt. Ce processus comprend la construction de l'application et son déploiement. Nous avons configuré une action pour compiler l'application et générer les fichiers APK nécessaires. Une fois la construction terminée, les fichiers APK sont automatiquement envoyés sur notre groupe Telegram \ref{fig:telegram}. Ceci permet à l'équipe de disposer immédiatement des nouvelles versions de l'application.
+
+\begin{figure}[h]{
+        \centering
+        \includegraphics[width=0.6\textwidth]{/home/olivier/projet/advanced_mobile_app/concept/rapport/images/telegram.png}
+        \caption{Bot Telegram pour le déploiement de l'application}
+        \label{fig:telegram}
+        \label{sec:problems}
+    }
+\end{figure}
 
 \subsection{Problèmes Rencontrés et Solutions}
-\label{sec:problems}
+
 
 \paragraph{Version des dépendances} Lors du développement, nous avons rencontré un problème majeur lié à la gestion des versions de Flutter utilisées par les différents membres de l'équipe. En effet, nous avons constaté qu'une personne utilisait la version 3.22 de Flutter, tandis que d'autres travaillaient avec la version 3.19. Cette disparité de versions a causé des conflits lors de l'intégration de nouvelles dépendances. Par exemple, certaines dépendances étaient compatibles avec une version de Flutter mais pas avec l'autre, ce qui a entraîné des erreurs de compilation. La synchronisation des versions de Flutter entre tous les membres de l'équipe s'est avérée difficile. Nous avions le choix entre downgrade Flutter ou de résoudre les conflits avec la dernière version. Nous avons opté pour la deuxième option, car elle nous permettait de bénéficier des dernières fonctionnalités et correctifs de Flutter. Cependant, cela a nécessité un effort supplémentaire pour résoudre les conflits et garantir la compatibilité des dépendances avec la version la plus récente de Flutter. Des bugs qui se sont avéré très chronophage ont aussi été rencontré avec nos outils de développement. Un membre de notre équipe a notamment eu des problèmes de dépendances qui n'a pu être résolut qu'en redémarrant VS-Code.
 

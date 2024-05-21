@@ -1,17 +1,14 @@
 \section{Évaluations}
-\subsection{Évaluations Implémentées}
-
-L'évaluation de l'application s'est concentrée sur la performance, l'exactitude des données, et la satisfaction utilisateur. Des tests de performance ont été réalisés pour s'assurer que l'application répond rapidement aux requêtes de scan. L'exactitude des informations fournies a été vérifiée contre des sources externes pour garantir la fiabilité des données.
 
 \subsection{Tests unitaires}
 
 Afin de garantir la fiabilité et la robustesse de notre application mobile, nous avons mis en place une série de tests unitaires. Les tests unitaires sont essentiels pour vérifier que chaque composant de l'application fonctionne correctement de manière isolée.
 
-Notre application utilise Firebase pour la gestion des données et l'authentification des utilisateurs, spécifiquement Firestore pour la base de données et Firebase Authentication pour la gestion des utilisateurs \ref{sec:architecture}. Étant donné que Firebase est une plateforme de services cloud, il est nécessaire d'utiliser des outils de mocking pour simuler les interactions avec ces services lors des tests unitaires.
+Notre application utilise Firebase pour la gestion des données et l'authentification des utilisateurs, spécifiquement Firestore pour la base de données et Firebase Authentication pour la gestion des utilisateurs \ref{sec:architecture}. Étant donné que Firebase est une plateforme de services cloud, il est nécessaire d'utiliser des outils de mocking pour simuler les interactions avec ces services lors des tests unitaires ce qui a posé quelques difficultés \ref{sec:problems}.
 
 Pour ce faire, nous avons intégré plusieurs librairies de mocking dans notre suite de tests :
 
-\begin{itemize}
+\begin{itemize}[noitemsep]
     \item \textbf{Mockito} : Cette librairie nous permet de créer des objets mock et de définir le comportement attendu de ces objets lors des tests. Elle est utilisée pour simuler les interactions avec diverses dépendances de notre application.
     \item \textbf{MockFirebaseFirestore} : Cette librairie est utilisée pour simuler les opérations de la base de données Firestore. Elle permet de créer des collections et des documents fictifs, de simuler les requêtes et de vérifier les interactions avec Firestore sans nécessiter une connexion réelle à la base de données.
     \item \textbf{MockAuthentication} : Cette librairie est utilisée pour simuler les opérations d'authentification de Firebase. Elle permet de tester des scénarios d'inscription, de connexion et de déconnexion des utilisateurs sans interagir avec le service d'authentification réel.
@@ -19,14 +16,6 @@ Pour ce faire, nous avons intégré plusieurs librairies de mocking dans notre s
 
 \subsection{Tests utilisateurs}
 
-Des tests utilisateurs ont été planifié mais n'ont pas être mis en oeuvre puisque nous avons décidé de nous focaliser sur la qualité de l'application. Il était prévu de réaliser une série de tests utilisateurs avec un échantillon représentatif de notre public cible. Ces tests auraient été conçus pour évaluer chaque user story et comprendre comment les utilisateurs interagissent avec notre application dans divers scénarios.
-
-\begin{itemize}
-    \item \textbf{Recrutement des participants} : Nous avions prévu de recruter des participants de différents âges, sexes, niveaux d'expérience technologique et contextes d'utilisation pour obtenir une image complète de la façon dont notre application est utilisée par un large éventail d'utilisateurs.
-    \item \textbf{Création de scénarios de test} : Chaque user story aurait été transformée en un ou plusieurs scénarios de test. Ces scénarios auraient été conçus pour être aussi proches que possible des tâches réelles que les utilisateurs pourraient entreprendre avec l'application.
-    \item \textbf{Réalisation des tests} : Les participants auraient été invités à accomplir les tâches décrites dans les scénarios de test tout en partageant leurs pensées à haute voix. Cela nous aurait permis de comprendre non seulement ce que les utilisateurs font, mais aussi pourquoi ils le font.
-    \item \textbf{Analyse des résultats} :  Après chaque session de test, nous aurions analysé les résultats pour identifier les problèmes d'utilisabilité, les points de friction et les opportunités d'amélioration. Ces informations auraient ensuite été utilisées pour affiner et améliorer l'application.
-    \item \textbf{Itération et amélioration} : Enfin, nous aurions utilisé les résultats des tests pour apporter des modifications à l'application et améliorer l'expérience utilisateur. Nous aurions répété ce processus jusqu'à ce que nous soyons satisfaits de la qualité et de l'utilisabilité de l'application.
-\end{itemize}
+Des tests utilisateurs ont été planifié mais n'ont pas pu être mis en oeuvre puisque nous avons préféré développer l'application entièrement avant de la faire tester. Il était prévu de réaliser une série de tests utilisateurs à des proches. Ces tests ont été conçus pour évaluer chaque user story et comprendre comment les utilisateurs interagissent avec notre application dans divers scénarios.
 
 %En fin de compte, notre objectif était de créer une application qui répond aux besoins de nos utilisateurs de manière intuitive et efficace. Bien que nous n'ayons pas encore pu réaliser ces tests utilisateurs, ils restent une priorité pour notre équipe à mesure que nous continuons à développer et à améliorer notre application.
