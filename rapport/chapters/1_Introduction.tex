@@ -72,7 +72,20 @@ Nous avons considéré différentes technologies pour stocker nos données avant
 Nous avons choisi Firebase Firestore pour plusieurs raisons clés. En tant que base de données NoSQL, elle élimine l'impedance mismatch, simplifiant ainsi le développement. Firebase est gratuit dans son tier initial, ce qui est idéal pour démarrer sans coûts initiaux. Étant basé dans le cloud, il permet une synchronisation en temps réel des données. De plus, Firebase offre des services intégrés tels que l'authentification et les analytics, réduisant ainsi le besoin de solutions tierces. L'expérience préalable d'un membre de notre équipe avec cette technologie a également été un atout majeur. En somme, Firebase Firestore s'est avéré être la solution idéale, offrant une intégration simplifiée, des coûts initiaux réduits, des services complets, et une accélération du développement sans nécessiter de backend complexe.
 
 
-\subsection{Outils de développement et de déploiement}
+\subsection{Méthodologie de Développement}
+
+\subsubsection{Kanban}
+
+Les tâches sont organisées en issues avec les états suivants :
+
+\begin{itemize}[noitemsep]
+    \item \textbf{To Do} : Tâches dont l'implémentation n'est pas encore commencée. Elles peuvent cependant déjà être attribuées.
+    \item \textbf{In Progress} : Tâches en cours d'implémentation.
+    \item \textbf{To Review} : Une fois l'implémentation terminée, le développeur ouvre une pull request et place la story dans cette colonne. Un autre développeur vérifie l'implémentation, peut laisser des commentaires, et s'assigne la story en tant que reviewer. Si l'implémentation nécessite des modifications, il la déplace dans la colonne "To Do" avec des commentaires explicatifs. Sinon, il ferme la pull request et déplace l'issue dans "Done".
+    \item \textbf{Done} : Tâches terminées.
+\end{itemize}
+
+\subsubsection{Outils de développement}
 
 Pour assurer une gestion efficace du projet et maintenir une haute qualité de code, nous avons utilisé les outils suivants :
 
