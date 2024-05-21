@@ -1,5 +1,11 @@
 \section{Développement Technique}
 
+\subsection{Gestion des erreurs}
+\label{sec:error_handling}
+
+Pour gérer les erreurs dans notre application, nous avons utilisé \texttt{either}, qui permet de retourner une erreur si une opération n'a pas fonctionné, et de renvoyer les données si elle a réussi. De cette manière, nous pouvons gérer facilement l'erreur au front-end. Ensuite, nous avons créé des classes avec des exceptions et des erreurs spécifiques pour pouvoir les afficher à l'utilisateur. Il est essentiel que ces erreurs soient bienveillantes et compréhensibles pour l'utilisateur, et qu'elles ne soient pas techniques. Ainsi, l'utilisateur peut facilement comprendre ce qui s'est passé et comment rectifier la situation, sans être inquiété par des messages d'erreur trop complexes ou techniques.
+
+
 \subsection{Peuplement de la base de données}
 
 Pour peupler la base de données de notre application, nous avons rassemblé des données disponibles librement et publiquement sur Internet, en particulier sur les sites de la Migros, de la Coop et de Denner. Ces sites fournissent des métadonnées des articles, incluant leurs prix et des images associées. Nous avons débuté par la création d'un script en Dart qui intègre les produits, certaines métadonnées, ainsi que quelques types de produits et utilisateurs, afin de tester l'application de manière adéquate. Ce script se connecte à Firestore et envoie les données sur Firebase, ce qui permet de peupler efficacement la base de données. Bien que ce script manuel soit initialement utilisé pour insérer les données nécessaires au test de l'application, nous envisageons à l'avenir de développer un scraper web. Ce scraper pourrait automatiser la récupération des données de tous les produits des sites de la Migros, de la Coop, etc., garantissant ainsi une base de données complète et constamment mise à jour. Grâce à cette automatisation, nous pourrions maintenir une base de données riche et précise, essentielle pour le bon fonctionnement de l'application.

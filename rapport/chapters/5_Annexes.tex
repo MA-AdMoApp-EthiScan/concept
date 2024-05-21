@@ -1,40 +1,5 @@
 \section{Annexes}
 
-\subsection{Cahier des Charges Original}
-
-\begin{itemize}[noitemsep]
-    \item \textbf{Introduction}: EthiScan est une application mobile conçue pour permettre aux utilisateurs de scanner des produits et de recevoir des informations détaillées alignées avec leurs valeurs personnelles de consommation. Elle vise à promouvoir une consommation responsable en fournissant des données telles que l'évolution du prix, les labels environnementaux et nutritionnels, l'impact carbone, et plus encore.
-    \item \textbf{Objectifs du Projet}: Aider les utilisateurs à faire des choix de consommation éclairés et responsables. Fournir des informations détaillées et fiables sur les produits scannés. Promouvoir les achats alignés avec les valeurs personnelles des utilisateurs, comme le bio, le local, la qualité, le prix, l'impact carbone, la durabilité de l'emballage, et la possibilité de livraison par la poste.
-    \item \textbf{Fonctionnalités Principales}:
-          \begin{itemize}[noitemsep]
-              \item \textbf{Scan de Produit}: Permettre le scan de codes-barres pour identifier rapidement les produits.
-              \item \textbf{Liste des Produits Favoris}: Possibilité d'ajouter des produits à une liste de favoris pour un accès rapide.
-              \item \textbf{S'abonner aux Metadatas}: Configuration de préférences d'achat personnalisées : Local, Bio, Qualité, Prix, Impact carbone, Durabilité de l'emballage, Livrable par la poste.
-              \item \textbf{Sections Détaillées des Métadonnées}:
-                    \begin{itemize}[noitemsep]
-                        \item \textbf{Labels}: Affichage des labels et certifications (éco-labels, bio, etc.).
-                        \item \textbf{Évolution du Prix}: Visualisation de l'évolution du prix chez différents fournisseurs.
-                        \item \textbf{Impact Carbone}: Information sur l'empreinte carbone du produit.
-                        \item \textbf{Metadata}: Informations générales (nom du produit, lien vers plus d'infos).
-                    \end{itemize}
-          \end{itemize}
-    \item \textbf{Stack Technologique}: Front-end: Flutter pour une expérience utilisateur cohérente sur iOS, Android et le Web. Back-end: Firebase pour l'authentification, le stockage des données, et les fonctions backend.
-    \item \textbf{Spécifications Techniques}:
-          \begin{itemize}[noitemsep]
-              \item \textbf{Exigences Fonctionnelles}: Authentification sécurisée des utilisateurs. Interface intuitive pour le scan de produits et l'affichage des informations. Système de favoris et de préférences personnalisables. Intégration d'APIs externes pour la récupération des données produits.
-              \item \textbf{Exigences Non-Fonctionnelles}: Performances: Temps de réponse rapide pour le scan et l'affichage des données. Accessibilité: Conception inclusive pour une utilisation facile par tous.
-          \end{itemize}
-    \item \textbf{Deadlines}:
-          \begin{itemize}[noitemsep]
-              \item Formation groupes et choix du sujet du mini-projet – Semaine 1
-              \item Descriptif du projet (mini cahier de charges) – A remettre avant le cours de la semaine 2
-              \item Validation du projet – semaine 3 – en classe
-              \item Présentations du mini-projet (avec démo) – Semaines 14-15
-              \item Livraison d’un prototype fonctionnel et la rédaction d’un rapport (~15-20 pages). A rendre le lundi avant la dernière séance
-          \end{itemize}
-    \item \textbf{Conclusion}: EthiScan ambitionne de devenir une référence pour les consommateurs souhaitant aligner leurs achats avec leurs valeurs personnelles. Par la transparence et la fourniture d'informations détaillées, l'application vise à promouvoir une consommation plus responsable et éclairée.
-\end{itemize}
-
 \subsection{Planning Actualisé Avant/Après}
 
 \begin{itemize}[noitemsep]
@@ -45,19 +10,71 @@
 \subsection{Liste des Bugs Connus}
 
 \begin{itemize}[noitemsep]
-    \item Erreur de connexion intermittente au service de scan de code-barres.
-    \item Problèmes d'affichage sur certaines versions d'Android.
-    \item Latence lors du chargement des données produits pour les articles récemment ajoutés.
+    \item Overflow sur le login
+    \item Impossible de lancer la caméra sur Linux ou Chrome
+    \item Si un product n'a pas le même id que son docId, il ne peut pas être supprimé
 \end{itemize}
+
+\section*{Dépendances}
 
 \subsection{Dépendances}
 
-\begin{itemize}[noitemsep]
-    \item Flutter
-    \item Firebase
-    \item API externe pour les données produits
-\end{itemize}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{0.35\textwidth}|m{0.45\textwidth}|}
+        \hline
+        \textbf{Package}                 & \textbf{Version} \\ \hline
+        flutter                          & sdk: flutter     \\ \hline
+        injectable                       & \texttt{>2.4.0}  \\ \hline
+        flutter\_localizations           & sdk: flutter     \\ \hline
+        cupertino\_icons                 & \texttt{>1.0.6}  \\ \hline
+        flutter\_clean\_architecture     & \texttt{>5.0.4}  \\ \hline
+        firebase\_core                   & \texttt{>2.25.5} \\ \hline
+        flutter\_svg                     & \texttt{>2.0.4}  \\ \hline
+        syncfusion\_flutter\_charts      & \texttt{>21.2.4} \\ \hline
+        shared\_preferences              & \texttt{>2.2.2}  \\ \hline
+        jwt\_decoder                     & \texttt{>2.0.1}  \\ \hline
+        flutter\_dotenv                  & \texttt{>5.1.0}  \\ \hline
+        flutter\_launcher\_icons         & \texttt{>0.13.1} \\ \hline
+        flutter\_i18n                    & \texttt{>0.35.1} \\ \hline
+        get\_it                          & \texttt{>7.1.3}  \\ \hline
+        firebase\_auth                   & \texttt{>4.19.2} \\ \hline
+        cloud\_firestore                 & \texttt{>4.17.3} \\ \hline
+        provider                         & \texttt{>6.1.2}  \\ \hline
+        bloc                             & \texttt{>8.1.2}  \\ \hline
+        flutter\_bloc                    & \texttt{>8.1.3}  \\ \hline
+        path\_provider                   & \texttt{>2.0.2}  \\ \hline
+        auto\_size\_text                 & \texttt{>3.0.0}  \\ \hline
+        freezed\_annotation              & \texttt{>2.2.0}  \\ \hline
+        camera                           & \texttt{>0.11.0} \\ \hline
+        google\_mlkit\_barcode\_scanning & \texttt{>0.12.0} \\ \hline
+        http                             & \texttt{>1.2.1}  \\ \hline
+        intl                             & \texttt{>0.19.0} \\ \hline
+        json\_annotation                 & \texttt{>4.9.0}  \\ \hline
+        uuid                             & \texttt{>4.4.0}  \\ \hline
+        phone\_number\_controller        & \texttt{>1.0.4}  \\ \hline
+    \end{tabular}
+    \caption{Dépendances du projet}
+    \label{table:dependencies}
+\end{table}
 
+\subsection{Dépendances de Développement}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{0.35\textwidth}|m{0.45\textwidth}|}
+        \hline
+        \textbf{Package}      & \textbf{Version} \\ \hline
+        injectable\_generator & \texttt{>2.1.5}  \\ \hline
+        build\_runner         & \texttt{>2.0.5}  \\ \hline
+        json\_serializable    & \texttt{>6.1.4}  \\ \hline
+        freezed               & \texttt{>2.4.7}  \\ \hline
+        flutter\_test         & sdk: flutter     \\ \hline
+        flutter\_lints        & \texttt{>4.0.0}  \\ \hline
+    \end{tabular}
+    \caption{Dépendances de développement du projet}
+    \label{table:dev-dependencies}
+\end{table}
 
 \subsection{Planning}
 
@@ -91,3 +108,8 @@ Nous avons désolidarisé la gestion du temps de notre liste des tâches et avon
     \item Site de Denner: \cite{denner}
     \item Architecture : \cite{googleCloudArchitecture}
 \end{itemize}
+
+
+\subsection{Cahier des charges original}
+
+\includepdf[pages=-]{images/cahier_des_charges.pdf}
