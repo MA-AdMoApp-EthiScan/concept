@@ -35,14 +35,55 @@ Pour le développement de l'interface utilisateur, nous avons choisi Flutter com
     \item \textbf{Librairie Google pour QR code :} Intégrée pour offrir une fonctionnalité de scan rapide et précise.
 \end{itemize}
 
-\subsection{Back-end}
+\subsection{technologies de stockages}
 
-Pour gérer les données et l'authentification, nous avons intégré les services de Firebase, connus pour leur fiabilité et leur facilité d'intégration avec les applications Flutter. Voici les principaux services utilisés :
+Nous avons considéré différentes technologies pour stocker nos données avant de décider d'utiliser Firebase. Voici un aperçu de ces technologies de stockage utilisables sur Flutter, classées en deux catégories : SQL et NoSQL.
 
-\begin{itemize}[noitemsep]
-    \item \textbf{Firebase Authentication :} Solution robuste et sécurisée pour la gestion des utilisateurs et leur connexion à l'application.
-    \item \textbf{Firebase Firestore :} Base de données NoSQL flexible et évolutive, idéale pour nos besoins dynamiques.
-\end{itemize}
+\subsubsection{SQL}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Technologie} & \textbf{Principales Fonctionnalités} & \textbf{Différences Notables} \\
+    \hline
+    SQFLite & Stockage SQL local fiable, contrôle fin des requêtes & Nécessite des connaissances en SQL \\
+    \hline
+    Drift & local, ORM avec sécurité des types, intégration réactive & Abstrait la complexité de SQLite \\
+    \hline
+    \end{tabular}
+    \caption{Technologies SQL pour Flutter}
+\end{table}
+
+\subsubsection{No SQL}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Technologie} & \textbf{Principales Fonctionnalités} & \textbf{Différences Notables} \\
+    \hline
+    Firebase Firestore & Base de données cloud scalable, synchronisation en temps réel & Coûts potentiels à grande échelle \\
+    \hline
+    Supabase & PostgreSQL open-source avec fonctionnalités en temps réel & Moins mature que Firebase \\
+    \hline
+    Flutter Storage & Stockage local simple et rapide pour paires clé-valeur & Fonctionnalités limitées \\
+    \hline
+    Hive & Base de données NoSQL rapide, légère et local & Moins flexible pour des requêtes complexes \\
+    \hline
+    ObjectBox & Base de données orientée objet performante local& Plus complexe à intégrer pour des projets simples \\
+    \hline
+    Shared Preferences & Stockage local clé-valeur simple et rapide & Pas adapté pour des données complexes ou volumineuses \\
+    \hline
+    \end{tabular}
+    \caption{Technologies NoSQL pour Flutter}
+\end{table}
+
+\subsubsection{Choix de technologies de stockage}
+
+Il était important pour nous d'avoir une base de données sur un cloud afin de pouvoir accéder aux données des produits scannés. Il ne nous restait donc que Firebase Firestore et Supabase. Nous avons décidé d'utiliser Firebase Firestore car un membre de notre équipe avait déjà de l'expérience avec cette Technologie. En plus de ça Firebase propose un tier gratuit et permet aussi le travail collaboratif. Un autre gros avantage de Firebase est qu'ils proposent un service d'authentification : Firebase Authentication qui est une solution robuste et sécurisée pour la gestion des utilisateurs et leur connexion à l'application. Service qui est nécessaire pour notre application.
+
+
 
 \subsection{Outils de développement et de déploiement}
 
